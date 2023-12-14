@@ -1,6 +1,6 @@
 function asyncFunction() {
-  let p = new Promise(function(resolve, reject) {
-    setTimeout(function() {
+  let p = new Promise(function (resolve, reject) {
+    setTimeout(function () {
       resolve("Async/await is cool : no callbacks and .then shit anymore !");
     }, 3000);
   });

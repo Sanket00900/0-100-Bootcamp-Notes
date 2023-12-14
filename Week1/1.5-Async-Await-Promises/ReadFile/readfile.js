@@ -15,17 +15,18 @@ const fs = require("fs");
 
 function readFilePromise(cb) {
   console.log("Inside my readFile");
-  fs.readFile("a.txt", "utf8", function(err, data) {
-    if (err)
-      throw err;
+  fs.readFile("a.txt", "utf8", function (err, data) {
+    if (err) throw err;
     cb(data);
   });
 }
 
 // callback fuction to call
-function onDone(data) { console.log(data); }
+function onDone(data) {
+  console.log(data);
+}
 
-setTimeout(function() {
+setTimeout(function () {
   console.log("2nd async function");
   readFilePromise(onDone);
 }, 2000);

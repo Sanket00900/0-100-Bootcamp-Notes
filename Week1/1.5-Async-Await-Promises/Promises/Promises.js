@@ -4,11 +4,10 @@ const fs = require("fs");
 
 function readFilePromise() {
   // console.log("Inside my readFile");
-  return new Promise(function(resolve, reject) {
+  return new Promise(function (resolve, reject) {
     console.log("Inside Promise");
     fs.readFile("b.txt", "utf8", (err, data) => {
-      if (err)
-        reject(err);
+      if (err) reject(err);
       console.log("Before Resolve");
       resolve(data);
     });
@@ -16,7 +15,9 @@ function readFilePromise() {
 }
 
 // callback fuction to call
-function onDone(data) { console.log(data); }
+function onDone(data) {
+  console.log(data);
+}
 
 var a = readFilePromise();
 // console.log("Returned Promise : ", a);

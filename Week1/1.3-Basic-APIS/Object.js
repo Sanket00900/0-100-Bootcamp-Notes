@@ -19,15 +19,15 @@ function objectMethods(obj) {
   console.log("After hasOwnProperty():", hasProp);
 
   // Adds new key value pair to object
-  let newObj = Object.assign({}, obj, {newProperty : "newValue"});
+  let newObj = Object.assign({}, obj, { newProperty: "newValue" });
   console.log("After Object.assign():", newObj);
 }
 
 // Example Usage for Object Methods
 const sampleObject = {
-  key1 : "value1",
-  key2 : "value2",
-  key3 : "value3",
+  key1: "value1",
+  key2: "value2",
+  key3: "value3",
 };
 
 objectMethods(sampleObject);
