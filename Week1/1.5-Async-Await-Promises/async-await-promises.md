@@ -28,3 +28,9 @@ Once the async function is called, it is sent to the Web API and the call stack 
 3. Whenever you create promise class object, you need to pass a callback function with resolve and reject parameters. Resolve is called when the async operation is completed successfully and reject is called when the async operation is failed.
 
 4. Promises are one time use, once the promise is resolved or rejected, it cannot be used again
+
+## Async Await
+
+1. It is just syntactic sugar. Still uses callbacks/Promises under the hood.
+2. Makes code much more readable than callbacks/Promises.
+3. Usually used on the caller side, not on the side where you define an async function
