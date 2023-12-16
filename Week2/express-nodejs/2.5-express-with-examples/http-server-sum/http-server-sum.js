@@ -15,6 +15,4 @@ app.get("/sum", (req, res) => {
   res.send(`Sum from 1 to ${n} is ${ans}`);
 });
 
-app.listen(3000, () => {
-  console.log("asfa");
-});
+app.listen(3000, () => { console.log("asfa"); });
