@@ -14,14 +14,14 @@ const bodyParser = require("body-parser");
 
 const app = express();
 app.use(bodyParser.json());
-app.use(bodyParser.urlencoded({extended : true}));
+app.use(bodyParser.urlencoded({ extended: true }));
 
 const users = [
   {
-    name : "John",
-    kidneys : [
+    name: "John",
+    kidneys: [
       {
-        healthy : false,
+        healthy: false,
       },
     ],
   },
@@ -37,7 +37,9 @@ app.get("/", (req, res) => {
 
   noOfHealthyKideneys = healthResult.length;
 
-  function checkHealth(kidney) { return kidney.healthy ? 1 : 0; }
+  function checkHealth(kidney) {
+    return kidney.healthy ? 1 : 0;
+  }
 
   const noOfUnhealthyKideneys = noOfKideneys - noOfHealthyKideneys;
 
@@ -52,9 +54,9 @@ app.get("/", (req, res) => {
 
 app.post("/", (req, res) => {
   const isHealthy = req.body.isHealthy;
-  users[0].kidneys.push({healthy : isHealthy});
+  users[0].kidneys.push({ healthy: isHealthy });
   res.json({
-    msg : "Done!",
+    msg: "Done!",
   });
 });
 
@@ -69,7 +71,7 @@ app.put("/", (req, res) => {
     }
   }
 
-  res.json({msg : "Kideny Replaced !"});
+  res.json({ msg: "Kideny Replaced !" });
 });
 
 //? Removing all unhealthy kidenys !
@@ -98,10 +100,12 @@ app.delete("/", (req, res) => {
     }
     users[0].kidneys = healthyKideneys;
 
-    res.json({msg : "unhealthy Kidenyes Removed !"});
+    res.json({ msg: "unhealthy Kidenyes Removed !" });
   } else {
-    res.status(411).json({msg : "unhealthy Kidenyes Removed !"});
+    res.status(411).json({ msg: "unhealthy Kidenyes Removed !" });
   }
 });
 
-app.listen(3000, () => { console.log("Server Running on 3000 !"); });
+app.listen(3000, () => {
+  console.log("Server Running on 3000 !");
+});
