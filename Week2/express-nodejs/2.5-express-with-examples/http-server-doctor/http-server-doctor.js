@@ -52,17 +52,17 @@ app.get("/", (req, res) => {
 
 //? Adding new Kideny
 
-app.post("/", (req, res) => {
+app.post("/add", (req, res) => {
   const isHealthy = req.body.isHealthy;
   users[0].kidneys.push({ healthy: isHealthy });
   res.json({
-    msg: "Done!",
+    msg: "New Kideny Added !",
   });
 });
 
 //? Removing all unhealthy kidenys !
 
-app.put("/", (req, res) => {
+app.put("/replace", (req, res) => {
   const healthResult = users[0].kidneys.filter(checkHealth);
   noOfHealthyKideneys = healthResult.length;
   function checkHealth(kidney) {
@@ -86,7 +86,7 @@ function isTheiratLeastOneUnhealthyKideny() {
   return atLeastOneUnhealthyKideny;
 }
 
-app.delete("/", (req, res) => {
+app.delete("/remove", (req, res) => {
   if (isTheiratLeastOneUnhealthyKideny()) {
     const kidneys = users[0].kidneys;
     const healthyKideneys = [];
