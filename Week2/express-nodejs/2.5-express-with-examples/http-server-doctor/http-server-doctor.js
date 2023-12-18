@@ -1,4 +1,4 @@
-/* 
+/*
 TODO :
 
 You need to create 4 routes(4 things that the hospital can do)
