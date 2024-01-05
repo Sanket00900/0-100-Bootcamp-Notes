@@ -5,9 +5,7 @@ app.use(express.json());
 
 const mongoose = require("mongoose");
 
-mongoose.connect(
-  "mongodb+srv://sanket:Cyclo%403090@cluster0.aafpcln.mongodb.net/userappnew"
-);
+mongoose.connect(process.env.MONGOURL);
 
 const User = mongoose.model("Users", {
   username: String,
