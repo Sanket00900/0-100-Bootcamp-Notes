@@ -8,9 +8,9 @@ const mongoose = require("mongoose");
 mongoose.connect(process.env.MONGOURL);
 
 const User = mongoose.model("Users", {
-  username: String,
-  email: String,
-  pasword: String,
+  username : String,
+  email : String,
+  pasword : String,
 });
 
 app.post("/signup", async (req, res) => {
@@ -18,25 +18,23 @@ app.post("/signup", async (req, res) => {
   const email = req.body.email;
   const username = req.body.name;
 
-  const existingUser = await User.findOne({ email: email });
+  const existingUser = await User.findOne({email : email});
   console.log(existingUser);
   if (existingUser) {
     return res.status(403).json({
-      msg: "User already exists !",
+      msg : "User already exists !",
     });
   } else {
     const user = new User({
-      username: username,
-      password: password,
-      email: email,
+      username : username,
+      password : password,
+      email : email,
     });
     await user.save();
     return res.json({
-      msg: "User Created !",
+      msg : "User Created !",
     });
   }
 });
 
-app.listen(3000, () => {
-  console.log("Server Running on PORT 3000 !");
-});
+app.listen(3000, () => { console.log("Server Running on PORT 3000 !"); });

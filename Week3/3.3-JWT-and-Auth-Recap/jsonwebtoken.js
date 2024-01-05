@@ -1,11 +1,11 @@
 const jwt = require("jsonwebtoken");
 const jwtSecret = "123456";
 
-//TODO : generate, decode and verify
+// TODO : generate, decode and verify
 
 const value = {
-  name: "sanket",
-  password: "123456",
+  name : "sanket",
+  password : "123456",
 };
 
 //! generating token
