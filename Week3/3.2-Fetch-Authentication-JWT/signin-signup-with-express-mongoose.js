@@ -13,12 +13,10 @@ const mongoose = require("mongoose");
 const jwt = require("jsonwebtoken");
 require("dotenv").config();
 
-const jwtSecret = process.env.jwtSecret;
+const jwtSecret = process.env.JWTSECRET;
 
 try {
-  mongoose.connect(
-    "mongodb+srv://sanket:Cyclo%403090@cluster0.aafpcln.mongodb.net/usersappnew"
-  );
+  mongoose.connect(process.env.MONGOURL);
   console.log("MongoDB connection established succcesfully");
 } catch (error) {
   console.log(error);

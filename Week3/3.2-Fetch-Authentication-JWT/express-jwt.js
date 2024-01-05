@@ -1,6 +1,6 @@
 const express = require("express");
 const jwt = require("jsonwebtoken");
-const jwtPassword = "123456";
+const jwtPassword = process.env.JWTSECRET;
 
 const app = express();
 app.use(express.json());
