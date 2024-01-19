@@ -5,7 +5,7 @@ import { CountContext, SetCountContext } from "../contexts/CountContext";
 
         CountApp
 
-          Count       
+          Count
 
   Buttons     CountRender
 
