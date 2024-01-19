@@ -15,7 +15,7 @@ function App() {
     <>
       {/*
       <TodosWrapper />
-    
+
       <button onClick={() => setSelectedId(1)}>1</button>
       <button onClick={() => setSelectedId(2)}>2</button>
       <button onClick={() => setSelectedId(3)}>3</button>
@@ -27,9 +27,9 @@ function App() {
       <button onClick={() => setSelectedId(9)}>9</button>
       <br />
       <TodoID id={selectedId} />
-    
+
        <CountSum />
-     
+
       <Counter />
          */}
       <Tax />
