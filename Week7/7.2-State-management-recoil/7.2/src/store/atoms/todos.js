@@ -30,7 +30,7 @@ export const filterTodosSelector = selector({
     return todos.filter(
       (x) =>
         x.title.toLowerCase().includes(filter) ||
-        x.description.toLowerCase().includes(filter)
+        x.description.toLowerCase().includes(filter),
     );
   },
 });
