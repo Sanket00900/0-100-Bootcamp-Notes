@@ -11,7 +11,7 @@ function TodosWrapper() {
     setInterval(() => {
       const fetchTodos = async () => {
         const response = await axios.get(
-          "https://sum-server.100xdevs.com/todos"
+          "https://sum-server.100xdevs.com/todos",
         );
         setTodos(response.data.todos);
       };
