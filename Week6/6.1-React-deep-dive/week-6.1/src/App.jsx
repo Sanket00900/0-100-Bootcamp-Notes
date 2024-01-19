@@ -10,7 +10,7 @@ function App() {
     <div>
       {/*<Header initialTitle="Hello from Header" />*/}
 
-      {/*      
+      {/*
       <CardWrapper>
         <Card1 />
       </CardWrapper>
@@ -20,7 +20,7 @@ function App() {
       <CardWrapper>
         <Card1 />
         <Card2 />
-      </CardWrapper> 
+      </CardWrapper>
     */}
       <TodosWrapper />
     </div>

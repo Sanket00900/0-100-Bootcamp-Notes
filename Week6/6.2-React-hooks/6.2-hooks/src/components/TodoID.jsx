@@ -7,7 +7,7 @@ function TodoID({ id }) {
   useEffect(() => {
     const fetchTodo = async () => {
       const response = await axios.get(
-        `https://sum-server.100xdevs.com/todo?id=${id}`
+        `https://sum-server.100xdevs.com/todo?id=${id}`,
       );
       setTodo(response.data.todo);
     };
